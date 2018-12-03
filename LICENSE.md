@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) 2018 Gregor de?ps_ev Cillia
+Copyright (c) 2018 Gregor de Cillia
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
