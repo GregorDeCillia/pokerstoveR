@@ -1,0 +1,18 @@
+Package: pokerstoveR
+Type: Package
+Title: An R interface for ps-eval
+Version: 0.1.0
+Author: Gregor de Cillia
+Authors@R: c(person("Gregor", "de Cillia", role = c("aut", "cre"),
+                    email = "de.cillia.gregor@gmail.com"))
+Maintainer: Gregor de Cillia <de.cillia.gregor@gmail.com>
+Description: Use the wrapper function ps_eval to get tabular output from
+  the bash executable ps-eval (pokerstove).
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: magrittr, dplyr, stringr
+Suggests: crayon
+URL: https://www.github.com/GregorDeCillia/pokerstoveR
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.0
