@@ -1,0 +1,64 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# pokerstoveR
+
+An R wrapper around the `ps-eval` executable from pokerstove.
+
+## Installation
+
+This package is not on CRAN. You can however install the development version
+with `install_github`.
+
+```{r, eval = FALSE}
+devtools::install_github("GregorDeCillia/pokerstoveR")
+```
+
+In order to use the package, `pokerstove` has to be installed and `ps-eval` has to
+be in the `PATH`.
+
+## Preflop equities
+
+Currently, there is just one useful command in the package which is called
+`ps_eval`. This command relies on `ps-eval` to calculate equities of NLHE hands.
+
+```{r example}
+library(pokerstoveR)
+ps_eval("AcAs", "2h7d")
+```
+
+```{r, include = FALSE}
+res <- ps_eval("AcAs", "2h7d")
+```
+
+
+In this case we see the preflop equities of the hands `AcAs` (ace of clubs, ace of 
+spades) versus `2h7d` (two of hearts, seven of diamonds). The aces 
+have `r res$equity[1]`% equity.
+
+The command `ps_eval` can be called with an arbitrarty number of hands.
+However, the number of hands has to be at least two.
+
+```{r cars}
+ps_eval("AcAs", "2h7d", "KsKd", "7h8h")
+```
+
+## Postflop equities
+
+To calculate the postflop equities, a board has to be specified using the `board` 
+parameter of `ps_eval`.
+
+```{r}
+ps_eval("AcAs", "2h7d", board = "2c2d2s")
+```
