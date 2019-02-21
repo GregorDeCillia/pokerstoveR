@@ -31,7 +31,7 @@ ps_eval("AcAs", "2h7d")
 
 In this case we see the preflop equities of the hands `AcAs` (ace of clubs, ace of spades) versus `2h7d` (two of hearts, seven of diamonds). The aces have 87.4224% equity.
 
-The command `ps_eval` can be called with an arbitrarty number of hands. However, the number of hands has to be at least two.
+The command `ps_eval` can be called with an arbitrary number of hands. However, the number of hands has to be at least two.
 
 ``` r
 ps_eval("AcAs", "2h7d", "KsKd", "7h8h")

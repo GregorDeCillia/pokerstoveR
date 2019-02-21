@@ -16,3 +16,4 @@ Suggests: crayon
 URL: https://www.github.com/GregorDeCillia/pokerstoveR
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.0
+Language: en-US
